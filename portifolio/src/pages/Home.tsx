@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                         viewport={{ once: false }}>
                         <div className="projectGrid">
                             <div className="projectContent">
-                                <ProjectBox name="Pizza RPG" description="Um projeto feito 100% em javascript, html e css, com intuito de treinar todos os conceitos basicos de javascript." link="https://github.com/GenissonEmilio/Pizza-project.git" />
+                                <ProjectBox name="E-commerce" description="E-commerce fullstack desenvolvido com Next.js, NestJS, Prisma, Tailwind CSS e TypeScript, integrando frontend moderno e responsivo com backend escalável e seguro." link="https://github.com/GenissonEmilio/Ecommerce.git" />
                             </div>
                             <div className="projectContent">
                                 <ProjectBox name="Portfolio" description="Um portifolio feito em React e typeScript visando treinar e criar um local para disponibilidade dos meus projetos futuros." link="https://github.com/GenissonEmilio/Portifolio.git" />
