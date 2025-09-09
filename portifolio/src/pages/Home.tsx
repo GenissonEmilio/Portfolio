@@ -12,6 +12,7 @@ import ToolsIcons from "../components/layout/ToolsIcons/ToolsIcons";
 import ProjectBox from "../components/ProjectCard/ProjectBox/ProjectBox";
 import ContactForm from "../components/forms/ContactForm";
 import NotebookCard from "../components/ProjectCard/NotebookCard/NotebookCard";
+import { motion } from "framer-motion";
 
 const Home: React.FC = () => {
 
@@ -87,23 +88,27 @@ const Home: React.FC = () => {
                     <MenuOptions name="Projetos" />
                     <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>O que eu Fiz</h3>
 
-                    <div className="projectGrid">
-                        <div className="projectContent">
-                            <ProjectBox name="Pizza RPG" description="Um projeto feito 100% em javascript, html e css, com intuito de treinar todos os conceitos basicos de javascript." link="https://github.com/GenissonEmilio/Pizza-project.git" />
+                    <motion.div id="projetos" 
+                        initial={{ opacity: 0, scale: 0.5, y: 50 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: false }}>
+                        <div className="projectGrid">
+                            <div className="projectContent">
+                                <ProjectBox name="Pizza RPG" description="Um projeto feito 100% em javascript, html e css, com intuito de treinar todos os conceitos basicos de javascript." link="https://github.com/GenissonEmilio/Pizza-project.git" />
+                            </div>
+                            <div className="projectContent">
+                                <ProjectBox name="Portfolio" description="Um portifolio feito em React e typeScript visando treinar e criar um local para disponibilidade dos meus projetos futuros." link="https://github.com/GenissonEmilio/Portifolio.git" />
+                            </div>
+                            <div className="projectContent">
+                                <ProjectBox name="API com Spring Boot" description="Uma API feita com Spring juntamente com o react." link="https://github.com/GenissonEmilio/API-Spring-Boot.git" />
+                            </div>
+                            <div className="projectContent">
+                                <ProjectBox name="Site para Atletica" description="Um site feito para a atletica, utilizando React e TypeScript." link="https://github.com/GenissonEmilio/AASI-Repository.git" />
+                            </div>
+                            
                         </div>
-                        <div className="projectContent">
-                            <ProjectBox name="Portfolio" description="Um portifolio feito em React e typeScript visando treinar e criar um local para disponibilidade dos meus projetos futuros." link="https://github.com/GenissonEmilio/Portifolio.git" />
-                        </div>
-                        <div className="projectContent">
-                            <ProjectBox name="API com Spring Boot" description="Uma API feita com Spring juntamente com o react." link="https://github.com/GenissonEmilio/API-Spring-Boot.git" />
-                        </div>
-                        <div className="projectContent">
-                            <ProjectBox name="Site para Atletica" description="Um site feito para a atletica, utilizando React e TypeScript." link="https://github.com/GenissonEmilio/AASI-Repository.git" />
-                        </div>
-                        
-                    </div>
-                    
-
+                    </motion.div>
                 </div>
 
                 <div id="contato" style={{ paddingBottom: '50px' }}>
