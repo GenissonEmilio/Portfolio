@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+.form input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #374151;
+    color: white;
+    font-size: 14px;
+}
+
+.form textarea {
+    height: 120px;
+}

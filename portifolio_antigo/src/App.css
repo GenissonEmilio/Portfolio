@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:target {
+  scroll-margin-top: 60px;
+}
+
+h3 {
+  color: blue;
+}
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font: 20px; 
+  color: #333333;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.textLink {
+  padding-left: 5px;
+}
+
+.textLink a {
+  color: rgb(54, 54, 199);
+}
+
+.iconBox {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px 10px 10px 10px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+}
+
+.projectContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.contatoContainer {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contatoContent {
+  display: none;
+}
+
+.projectGeneralIMG {
+  height: 300px;
+  width: 400px;
+  border-radius: 4px;
+}
+
+.fadeInProject {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .contatoContent {
+    display: block;
+  }
+}
+
+@media (min-width: 501px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iconBox {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

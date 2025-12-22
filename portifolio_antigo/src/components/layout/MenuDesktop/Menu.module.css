@@ -1,0 +1,48 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+}
+
+.links {
+    display: flex;
+    list-style: none;   
+    width: 100%;
+    gap: 1.5rem;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.links li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 0 5px 0 5px;
+}
+
+.links li a:hover {
+    background-color: #3B82F6;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.name a {
+    text-decoration: none;
+    color: blue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: nowrap;
+}
+
+@media (max-width: 500px) {
+    .links {
+        display: none;
+    }
+}

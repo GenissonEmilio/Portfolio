@@ -1,0 +1,17 @@
+.options {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    padding-top: 10px;
+}
+
+.options h2 {
+    white-space: nowrap;
+}
+
+.linha {
+    background-color: blue;
+    width: 90%;
+    height: 2px;
+}
