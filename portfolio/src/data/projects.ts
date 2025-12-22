@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "SPARC - Smart Campus",
     description: "Sistema IoT completo para monitoramento de consumo de água e energia em campus universitário. Inclui dashboards em tempo real e alertas de anomalias.",
     techStack: ["Next.js", "Django", "IoT", "PostgreSQL", "MQTT"],
-    imageUrl: "/projects/sparc-bg.png", // Vamos tratar a falta de imagem no componente
+    imageUrl: "/projects/sparc-bg.png",
     repoUrl: "https://github.com/SEU_USER/sparc",
     demoUrl: "https://sparc-demo.vercel.app",
     featured: true,

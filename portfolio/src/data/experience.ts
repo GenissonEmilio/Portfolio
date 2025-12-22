@@ -45,19 +45,19 @@ export const experiences: Experience[] = [
       "Experiência com controle de versão (Git) e bancos de dados SQL Server e MySQL."
     ],
   },
-  {
-    id: "4",
-    role: "Bacharelando em Sistemas de Informação",
-    company: "Instituto Federal de Sergipe (IFS)",
-    location: "Sergipe, Brasil",
-    type: "On-site",
-    startDate: "2024",
-    endDate: "2028 (Previsão)",
-    description: [
-      "Formação sólida em Algoritmos, Estrutura de Dados e Lógica Matemática.",
-      "Estudos aprofundados em Modelagem de Dados, Engenharia de Software e Paradigma Orientado a Objetos.",
-      "Conhecimentos em Arquitetura de Computadores, Sistemas Operacionais e Redes.",
-      "Carga horária total prevista de 3.150 horas com foco em gestão e desenvolvimento tecnológico."
-    ],
-  }
+  // {
+  //   id: "4",
+  //   role: "Bacharelando em Sistemas de Informação",
+  //   company: "Instituto Federal de Sergipe (IFS)",
+  //   location: "Sergipe, Brasil",
+  //   type: "On-site",
+  //   startDate: "2024",
+  //   endDate: "2028 (Previsão)",
+  //   description: [
+  //     "Formação sólida em Algoritmos, Estrutura de Dados e Lógica Matemática.",
+  //     "Estudos aprofundados em Modelagem de Dados, Engenharia de Software e Paradigma Orientado a Objetos.",
+  //     "Conhecimentos em Arquitetura de Computadores, Sistemas Operacionais e Redes.",
+  //     "Carga horária total prevista de 3.150 horas com foco em gestão e desenvolvimento tecnológico."
+  //   ],
+  // }
 ];

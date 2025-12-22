@@ -80,7 +80,7 @@ export default function ResumePage() {
               <span className="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-slate-900 border-2 border-primary" />
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                 <h4 className="text-lg font-bold text-slate-200">Bacharelado em Sistemas de Informação</h4>
-                <span className="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full w-fit">2023 - Presente</span>
+                <span className="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full w-fit">2024 - Presente</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400 mb-2">
                 <Building2 size={16} />
