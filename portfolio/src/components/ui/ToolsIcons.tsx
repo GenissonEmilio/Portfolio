@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { any } from "three/tsl";
 
 type ToolsIconsProps = {
     name: string,
     color: string,
-    icon: React.ElementType
+    icon: React.ElementType<React.SVGProps<SVGSVGElement>>
 }
 
 const ToolsIcons: React.FC<ToolsIconsProps> = ({ name, color, icon: Icon}) => {
