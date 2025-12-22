@@ -98,7 +98,7 @@ export default function Projects() {
         {/* Botão "Ver Mais" para GitHub */}
         <div className="mt-16 text-center">
             <Link 
-                href="https://github.com/SEU_USER" // Coloque seu user real aqui depois
+                href="https://github.com/GenissonEmilio"
                 target="_blank"
                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
             >

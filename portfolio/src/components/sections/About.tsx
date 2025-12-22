@@ -73,16 +73,16 @@ export default function About() {
                    {/* FOTO - Certifique-se de ter uma imagem em /public/profile.jpg */}
                    {/* Se não tiver imagem ainda, deixe o componente Image comentado e use a div cinza abaixo */}
                    
-                   {/* <Image 
+                   <Image 
                     src="/profile.jpg" 
-                    alt="Genilsson Profile" 
+                    alt="Genisson Profile" 
                     fill 
                     className="object-cover"
-                   /> */}
+                   />
                    
                    {/* Placeholder temporário caso não tenha foto */}
                    <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-500">
-                      Foto Aqui
+                      Photo Here
                    </div>
                 </div>
               </div>
