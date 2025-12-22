@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Terminal, Cpu, Database } from "lucide-react";
+import { ArrowRight, Download, Cpu, BrainCircuit, MonitorSmartphone } from "lucide-react"; // Ícones atualizados
 import Link from "next/link";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 export default function Hero() {
-  // Lista de competências que serão digitadas
+  // Lista de competências refinada com base no seu CV
   const displayText = useTypewriter([
     "Full Stack Developer",
-    "Computer Vision Enthusiast", // Referência ao seu interesse em ViT
-    "IoT & Systems Architect",    // Referência ao projeto SPARC
-    "Data Modeling Specialist",   // Referência ao MER/DER
+    "AI & Deep Learning Researcher", // Muito mais forte que "Enthusiast"
+    "IoT Solutions Architect",       // Referência ao SPARC/Morea
+    "Mobile & Web Specialist",       // Referência ao Freelance (Java/Kotlin/React)
   ]);
 
   return (
@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className="container px-4 mx-auto text-center z-10 relative">
         
-        {/* Badge "Open to work" ou similar */}
+        {/* Badge "Open to work" */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,8 +68,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="max-w-2xl mx-auto text-slate-400 mb-10 text-lg leading-relaxed"
         >
-          Transformo conceitos complexos em interfaces modernas e sistemas robustos. 
-          Focado em criar experiências digitais que unem performance, design e inteligência de dados.
+          Pesquisador e Desenvolvedor focado em criar soluções que conectam <strong className="text-slate-200">Inteligência Artificial</strong>, <strong className="text-slate-200">Sistemas Web</strong> e <strong className="text-slate-200">IoT</strong>. 
+          Transformo pesquisa acadêmica em produtos digitais de alto impacto.
         </motion.p>
 
         {/* Botões de Ação */}
@@ -87,30 +87,43 @@ export default function Hero() {
           </Link>
           
           <Link 
-            href="/resume" 
+            href="/curriculo.pdf" 
+            target="_blank" // Abre em nova aba para não sair do site
             className="w-full sm:w-auto px-8 py-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-medium hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center gap-2"
           >
             Ver Currículo <Download size={18} />
           </Link>
         </motion.div>
 
-        {/* Tech Stack Flutuante (Decorativo) */}
-        <div className="mt-20 flex justify-center gap-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-           {/* Ícones representativos - Você pode adicionar mais depois */}
-           <div className="flex flex-col items-center gap-2">
-              <Terminal size={32} />
-              <span className="text-xs">Dev</span>
+        {/* Tech Stack Flutuante (Atualizado com seus pilares reais) */}
+        <div className="mt-20 flex justify-center gap-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+           
+           {/* Pilar 1: Web e Mobile (Freelance/Next.js/Kotlin) */}
+           <div className="flex flex-col items-center gap-3 group cursor-default">
+              <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-primary/50 group-hover:bg-primary/10 transition-colors">
+                <MonitorSmartphone size={32} className="text-slate-400 group-hover:text-primary transition-colors" />
+              </div>
+              <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">Web & Mobile</span>
            </div>
-           <div className="flex flex-col items-center gap-2">
-              <Database size={32} />
-              <span className="text-xs">Data</span>
+
+           {/* Pilar 2: AI & Research (PIBIC/CNNs) */}
+           <div className="flex flex-col items-center gap-3 group cursor-default">
+              <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-colors">
+                <BrainCircuit size={32} className="text-slate-400 group-hover:text-purple-400 transition-colors" />
+              </div>
+              <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">AI & Vision</span>
            </div>
-           <div className="flex flex-col items-center gap-2">
-              <Cpu size={32} />
-              <span className="text-xs">IoT/AI</span>
+
+           {/* Pilar 3: IoT & Hardware (SPARC/Morea) */}
+           <div className="flex flex-col items-center gap-3 group cursor-default">
+              <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-pink-500/50 group-hover:bg-pink-500/10 transition-colors">
+                <Cpu size={32} className="text-slate-400 group-hover:text-pink-400 transition-colors" />
+              </div>
+              <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">IoT Systems</span>
            </div>
+
         </div>
       </div>
     </section>
   );
-}
+} 

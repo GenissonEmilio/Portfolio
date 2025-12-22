@@ -52,7 +52,7 @@ export default function Navbar() {
             className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 flex items-center gap-2"
           >
             <Code2 className="text-primary w-6 h-6" />
-            <span>Genilsson<span className="text-primary">.</span></span>
+            <span>Genisson<span className="text-primary">.</span></span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -84,10 +84,10 @@ export default function Navbar() {
           {/* Social Icons & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-3 pr-4 border-r border-white/10">
-              <Link href="https://github.com/SEU_USER" target="_blank" className="text-slate-400 hover:text-white transition-colors">
+              <Link href="https://github.com/GenissonEmilio" target="_blank" className="text-slate-400 hover:text-white transition-colors">
                 <Github size={20} />
               </Link>
-              <Link href="https://linkedin.com/in/SEU_USER" target="_blank" className="text-slate-400 hover:text-white transition-colors">
+              <Link href="https://linkedin.com/in/genisson-emilio" target="_blank" className="text-slate-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </Link>
             </div>
