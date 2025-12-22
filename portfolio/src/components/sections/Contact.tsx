@@ -54,14 +54,14 @@ export default function Contact() {
             {/* Redes Sociais */}
             <div className="mt-10 flex gap-4">
               <Link 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/genisson-emilio" 
                 target="_blank"
                 className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
               >
                 <Linkedin size={18} />
               </Link>
               <Link 
-                href="https://github.com" 
+                href="https://github.com/GenissonEmilio" 
                 target="_blank"
                 className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all"
               >
