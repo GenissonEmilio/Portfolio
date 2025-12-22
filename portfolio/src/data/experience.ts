@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     company: "Laboratório Morea (IFS Campus Lagarto)",
     location: "Lagarto, SE",
     type: "Hybrid",
-    startDate: "2024",
+    startDate: "2025",
     endDate: "Present",
     description: [
       "Desenvolvimento de soluções tecnológicas para o ambiente acadêmico e gestão do campus.",
