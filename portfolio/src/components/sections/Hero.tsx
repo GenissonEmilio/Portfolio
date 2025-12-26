@@ -1,17 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Cpu, BrainCircuit, MonitorSmartphone } from "lucide-react"; // Ícones atualizados
+import { ArrowRight, Download, Cpu, BrainCircuit, MonitorSmartphone } from "lucide-react";
 import Link from "next/link";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
 export default function Hero() {
-  // Lista de competências refinada com base no seu CV
   const displayText = useTypewriter([
     "Full Stack Developer",
-    "AI & Deep Learning Researcher", // Muito mais forte que "Enthusiast"
-    "IoT Solutions Architect",       // Referência ao SPARC/Morea
-    "Mobile & Web Specialist",       // Referência ao Freelance (Java/Kotlin/React)
+    "AI & Deep Learning Researcher", 
+    "IoT Solutions Architect",
+    "Mobile & Web Specialist",
   ]);
 
   return (
@@ -88,14 +87,14 @@ export default function Hero() {
           
           <Link 
             href="/curriculo.pdf" 
-            target="_blank" // Abre em nova aba para não sair do site
+            target="_blank"
             className="w-full sm:w-auto px-8 py-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-medium hover:bg-slate-800 hover:text-white transition-all flex items-center justify-center gap-2"
           >
             Ver Currículo <Download size={18} />
           </Link>
         </motion.div>
 
-        {/* Tech Stack Flutuante (Atualizado com seus pilares reais) */}
+        {/* Tech Stack Flutuante */}
         <div className="mt-20 flex justify-center gap-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
            
            {/* Pilar 1: Web e Mobile (Freelance/Next.js/Kotlin) */}

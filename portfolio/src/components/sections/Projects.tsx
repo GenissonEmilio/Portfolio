@@ -37,7 +37,7 @@ export default function Projects() {
               transition={{ delay: index * 0.1 }}
               className="group relative rounded-xl bg-surface border border-slate-800 overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 flex flex-col h-full"
             >
-              {/* Área da Imagem (Placeholder com Gradiente caso não tenha imagem real) */}
+              {/* Área da Imagem */}
               <div className="h-48 w-full bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
                 {/* Ícone decorativo de fundo */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity">

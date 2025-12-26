@@ -70,17 +70,12 @@ export default function About() {
               {/* Borda Gradiente Animada (container atrás da imagem) */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-purple-500 to-pink-500 animate-pulse-slow p-1">
                 <div className="w-full h-full rounded-full bg-background relative overflow-hidden">
-                   {/* FOTO - Certifique-se de ter uma imagem em /public/profile.jpg */}
-                   {/* Se não tiver imagem ainda, deixe o componente Image comentado e use a div cinza abaixo */}
-                   
                    <Image 
                     src="/profile.jpg" 
                     alt="Genisson Profile" 
                     fill 
                     className="object-cover"
                    />
-                   
-                   {/* Placeholder temporário caso não tenha foto */}
                    <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-500">
                       Photo Here
                    </div>

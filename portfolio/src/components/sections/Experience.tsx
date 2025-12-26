@@ -6,7 +6,6 @@ import { Calendar, MapPin, Briefcase } from "lucide-react";
 import { experiences } from "@/data/experience";
 import { cn } from "@/lib/utils";
 
-// Subcomponente para cada Card
 const ExperienceCard = ({ experience, index }: { experience: any; index: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -22,7 +21,7 @@ const ExperienceCard = ({ experience, index }: { experience: any; index: number 
         isLeft ? "md:flex-row-reverse" : ""
       )}
     >
-      {/* 1. Lado Vazio (para equilibrar o Grid no Desktop) */}
+      {/* 1. Lado Vazio */}
       <div className="hidden md:block w-5/12" />
 
       {/* 2. O Ponto Central (Nó) */}
