@@ -1,10 +1,46 @@
 "use client";
 
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, Loader2, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(false);
+
+    // DADOS DO EMAILJS
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+        .then(
+          () => {
+            setLoading(false);
+            setSuccess(true);
+            formRef.current?.reset();
+            setTimeout(() => setSuccess(false), 5000);
+          },
+          (error) => {
+            console.error("Erro ao enviar email:", error);
+            setLoading(false);
+            setError(true);
+          }
+        );
+    }
+  };
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background Decorativo */}
@@ -70,19 +106,40 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Lado Direito: Formulário */}
+          {/* Lado Direito: Formulário Funcional */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-surface/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-800"
+            className="bg-surface/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-800 relative"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            {/* Feedback de Sucesso (Overlay) */}
+            {success && (
+               <motion.div 
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 animate={{ opacity: 1, scale: 1 }}
+                 className="absolute inset-0 bg-slate-900/90 z-10 flex flex-col items-center justify-center rounded-2xl text-center p-6"
+               >
+                  <CheckCircle className="text-green-500 w-16 h-16 mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Mensagem Enviada!</h3>
+                  <p className="text-slate-400">Obrigado pelo contato. Responderei o mais breve possível.</p>
+                  <button 
+                    onClick={() => setSuccess(false)}
+                    className="mt-6 text-sm text-primary hover:text-white underline"
+                  >
+                    Enviar nova mensagem
+                  </button>
+               </motion.div>
+            )}
+
+            <form ref={formRef} className="space-y-6" onSubmit={sendEmail}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-slate-400">Nome</label>
                   <input 
                     type="text" 
+                    name="name"
+                    required
                     placeholder="Seu nome"
                     className="w-full bg-background border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600"
                   />
@@ -91,6 +148,8 @@ export default function Contact() {
                   <label className="text-sm font-medium text-slate-400">Email</label>
                   <input 
                     type="email" 
+                    name="email"
+                    required
                     placeholder="seu@email.com"
                     className="w-full bg-background border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600"
                   />
@@ -101,16 +160,30 @@ export default function Contact() {
                 <label className="text-sm font-medium text-slate-400">Mensagem</label>
                 <textarea 
                   rows={4} 
+                  name="message"
+                  required
                   placeholder="Como posso ajudar?"
                   className="w-full bg-background border border-slate-800 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-slate-600 resize-none"
                 />
               </div>
 
               <button 
-                className="w-full py-4 bg-primary rounded-lg text-white font-medium hover:bg-primary/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                type="submit"
+                disabled={loading}
+                className="w-full py-4 bg-primary rounded-lg text-white font-medium hover:bg-primary/90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Enviar Mensagem <Send size={18} />
+                {loading ? (
+                  <>Enviando... <Loader2 className="animate-spin" size={18} /></>
+                ) : (
+                  <>Enviar Mensagem <Send size={18} /></>
+                )}
               </button>
+              
+              {error && (
+                <p className="text-red-400 text-sm text-center mt-2">
+                  Ocorreu um erro ao enviar. Tente novamente ou use o email direto.
+                </p>
+              )}
             </form>
           </motion.div>
 
