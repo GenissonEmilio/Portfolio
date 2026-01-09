@@ -82,7 +82,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-slate-500">Localização</p>
-                  <p className="text-slate-200">Brasil (Disponível Remoto)</p>
+                  <p className="text-slate-200">Brasil (Disponível)</p>
                 </div>
               </div>
             </div>

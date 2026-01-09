@@ -66,6 +66,7 @@ export default function About() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               className="relative w-64 h-64 md:w-72 md:h-72"
+              onContextMenu={(e) => e.preventDefault()}
             >
               {/* Borda Gradiente Animada (container atrás da imagem) */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-purple-500 to-pink-500 animate-pulse-slow p-1">
@@ -74,7 +75,7 @@ export default function About() {
                     src="/profile.jpg" 
                     alt="Genisson Profile" 
                     fill 
-                    className="object-cover"
+                    className="object-cover pointer-events-none select-none"
                    />
                    <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-500">
                       Photo Here
