@@ -8,7 +8,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     imageUrl: "/projects/portfolio-bg.png",
     repoUrl: "https://github.com/GenissonEmilio/portfolio",
-    demoUrl: "https://genissondev.vercel.app",
+    demoUrl: "https://genissondev.mage.dev.br/",
     featured: true,
   },
   {
