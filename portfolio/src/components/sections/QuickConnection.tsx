@@ -10,7 +10,7 @@ export default function QuickConnection() {
         
         <div className="flex flex-col md:flex-row md:justify-between gap-12 md:gap-24">
           
-          {/* Coluna da Esquerda: Nome/Marca */}
+          {/* Nome/Marca */}
           <div className="md:w-1/3">
             <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 mb-4 inline-block">
               Genisson<span className="text-primary">.</span>
@@ -20,10 +20,10 @@ export default function QuickConnection() {
             </p>
           </div>
 
-          {/* Colunas do Centro/Direita: Links e Contato */}
+          {/* Links e Contato */}
           <div className="flex flex-col sm:flex-row gap-16 md:gap-32">
             
-            {/* Coluna 1: Quick Links */}
+            {/* Quick Links */}
             <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-6">
                 Quick Links
@@ -49,7 +49,7 @@ export default function QuickConnection() {
               </ul>
             </div>
 
-            {/* Coluna 2: Contato */}
+            {/* Contato */}
             <div>
               <h3 className="text-sm font-bold text-primary uppercase tracking-wider mb-6">
                 Contato
@@ -77,7 +77,7 @@ export default function QuickConnection() {
                   (79) 99845-9574
                 </a>
 
-                {/* Ícones Sociais (Lado a Lado) */}
+                {/* Ícones Sociais */}
                 <div className="flex gap-4 mt-4">
                   <Link 
                     href="https://github.com/GenissonEmilio" 

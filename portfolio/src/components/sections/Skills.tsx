@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-// Importando ícones oficiais do pacote react-icons
-import { FaReact, FaJava, FaPython, FaNodeJs, FaGitAlt, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
+import { FaReact, FaJava, FaPython, FaNodeJs, FaGitAlt, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiExpress, SiTailwindcss, SiNextdotjs, SiFlutter, SiMysql, SiSpringboot, SiNestjs, SiSharp } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -26,6 +25,7 @@ const skills = [
   { name: "Nest JS", icon: SiNestjs, color: "#E0234E" },
   { name: "React Native", icon: TbBrandReactNative, color: "#61DAFB" },
   { name: "C#", icon: SiSharp, color: "#239120" },
+  { name: "PHP", icon: FaPhp, color: "#777BB4"},
 ];
 
 export default function Skills() {
@@ -41,7 +41,7 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Grid de Ícones (Pirâmide via justify-center) */}
+        {/* Grid de Ícones */}
         <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
           {skills.map((skill, index) => (
             <motion.div
@@ -53,7 +53,7 @@ export default function Skills() {
               whileHover={{ 
                 y: -5, 
                 borderColor: skill.color,
-                boxShadow: `0 0 15px ${skill.color}40` // 40 é transparência hex
+                boxShadow: `0 0 15px ${skill.color}40`
               }}
               className="w-24 h-24 bg-surface border border-slate-800 rounded-xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-300 group"
             >

@@ -3,14 +3,13 @@
 import { motion } from "framer-motion";
 import { Download, Mail, MapPin, Linkedin, Github, ExternalLink, Calendar, Building2 } from "lucide-react";
 import Link from "next/link";
-// Importamos os dados que já temos para não reescrever
 import { experiences } from "@/data/experience"; 
 
 export default function ResumePage() {
   return (
     <div className="pt-24 pb-20 container mx-auto px-4">
       
-      {/* --- CABEÇALHO DA PÁGINA (Ação de Download) --- */}
+      {/* Ação de Download */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
         <div>
           <h1 className="text-3xl font-bold text-slate-100">Meu Currículo</h1>
@@ -19,8 +18,6 @@ export default function ResumePage() {
           </p>
         </div>
         
-        {/* Botão de Download Real */}
-        {/* Certifique-se de que o arquivo "curriculo.pdf" esteja na pasta "public" */}
         <a 
           href="/curriculo.pdf" 
           download="Curriculo_Genisson.pdf"
@@ -31,17 +28,17 @@ export default function ResumePage() {
         </a>
       </div>
 
-      {/* --- A "FOLHA" DO CURRÍCULO DIGITAL --- */}
+      {/* FOLHA DO CURRÍCULO DIGITAL */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-4xl mx-auto bg-surface/50 backdrop-blur-sm border border-slate-800 rounded-xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
       >
-        {/* Detalhe visual de topo (Faixa colorida) */}
+        {/* Detalhe visual de topo */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-purple-500 to-pink-500" />
 
-        {/* 1. Header do Documento */}
+        {/* Header do Documento */}
         <header className="border-b border-slate-800 pb-8 mb-8 flex flex-col md:flex-row justify-between items-start gap-6">
           <div>
             <h2 className="text-4xl font-bold text-white mb-2">Genisson</h2>
@@ -68,7 +65,7 @@ export default function ResumePage() {
           </div>
         </header>
 
-        {/* 2. Educação (Fixo conforme seus dados) */}
+        {/* Educação */}
         <section className="mb-10">
           <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full" /> Educação
@@ -94,7 +91,7 @@ export default function ResumePage() {
           </div>
         </section>
 
-        {/* 3. Experiência (Puxando do src/data/experience.ts) */}
+        {/* Experiência */}
         <section className="mb-10">
           <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full" /> Experiência Profissional
@@ -124,7 +121,7 @@ export default function ResumePage() {
           </div>
         </section>
 
-        {/* 4. Skills (Lista compacta) */}
+        {/* Skills */}
         <section>
           <h3 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full" /> Skills & Tecnologias

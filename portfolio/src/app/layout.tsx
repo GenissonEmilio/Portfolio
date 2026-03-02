@@ -22,7 +22,6 @@ export default function RootLayout({
         <Navbar />
         
         <main className="min-h-screen flex flex-col relative overflow-hidden pt-16"> 
-           {/* Adicionei pt-16 (padding-top) para o conteúdo não ficar escondido atrás da navbar fixa */}
            
            {/* Efeitos de fundo (Glow) */}
            <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10" />

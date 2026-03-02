@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-32 overflow-hidden">
       
-      {/* Background Elements (Grid sutil) */}
+      {/* Background Elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
 
       <div className="container px-4 mx-auto text-center z-10 relative">
@@ -97,7 +97,7 @@ export default function Hero() {
         {/* Tech Stack Flutuante */}
         <div className="mt-20 flex justify-center gap-12 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
            
-           {/* Pilar 1: Web e Mobile (Freelance/Next.js/Kotlin) */}
+           {/* Web e Mobile (Freelance/Next.js/Kotlin) */}
            <div className="flex flex-col items-center gap-3 group cursor-default">
               <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-primary/50 group-hover:bg-primary/10 transition-colors">
                 <MonitorSmartphone size={32} className="text-slate-400 group-hover:text-primary transition-colors" />
@@ -105,7 +105,7 @@ export default function Hero() {
               <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">Web & Mobile</span>
            </div>
 
-           {/* Pilar 2: AI & Research (PIBIC/CNNs) */}
+           {/* AI & Research (PIBIC/CNNs) */}
            <div className="flex flex-col items-center gap-3 group cursor-default">
               <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-purple-500/50 group-hover:bg-purple-500/10 transition-colors">
                 <BrainCircuit size={32} className="text-slate-400 group-hover:text-purple-400 transition-colors" />
@@ -113,7 +113,7 @@ export default function Hero() {
               <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">AI & Vision</span>
            </div>
 
-           {/* Pilar 3: IoT & Hardware (SPARC/Morea) */}
+           {/* IoT & Hardware (SPARC/Morea) */}
            <div className="flex flex-col items-center gap-3 group cursor-default">
               <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-pink-500/50 group-hover:bg-pink-500/10 transition-colors">
                 <Cpu size={32} className="text-slate-400 group-hover:text-pink-400 transition-colors" />

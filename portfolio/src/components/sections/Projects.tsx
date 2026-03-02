@@ -44,7 +44,7 @@ export default function Projects() {
                   <FolderGit2 size={64} className="text-primary" />
                 </div>
                 
-                {/* Overlay gradiente para legibilidade */}
+                {/* Overlay gradiente */}
                 <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
               </div>
 

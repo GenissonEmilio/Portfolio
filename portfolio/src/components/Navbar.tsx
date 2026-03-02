@@ -21,7 +21,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Efeito para detectar scroll e ativar o modo "Glass"
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -30,7 +29,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fecha o menu mobile ao mudar de rota
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -69,7 +67,6 @@ export default function Navbar() {
                   )}
                 >
                   {item.name}
-                  {/* Linha animada abaixo do link ativo */}
                   {isActive && (
                     <motion.span
                       layoutId="activeNav"

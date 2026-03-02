@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           
-          {/* Lado Esquerdo: Informações */}
+          {/* Informações */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +106,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Lado Direito: Formulário Funcional */}
+          {/* Formulário Funcional */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

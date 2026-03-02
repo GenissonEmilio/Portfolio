@@ -21,10 +21,10 @@ const ExperienceCard = ({ experience, index }: { experience: any; index: number 
         isLeft ? "md:flex-row-reverse" : ""
       )}
     >
-      {/* 1. Lado Vazio */}
+      {/* Lado Vazio */}
       <div className="hidden md:block w-5/12" />
 
-      {/* 2. O Ponto Central (Nó) */}
+      {/* O Ponto Central (Nó) */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience, index }: { experience: any; index: number 
         className="absolute left-4 md:left-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background z-20 -translate-x-1/2 shadow-[0_0_15px_rgba(139,92,246,0.5)]"
       />
 
-      {/* 3. O Card de Conteúdo */}
+      {/* Card de Conteúdo */}
       <motion.div
         initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isLeft ? 50 : -50 }}
@@ -95,7 +95,7 @@ export default function Experience() {
 
         {/* Container da Linha do Tempo */}
         <div className="relative max-w-5xl mx-auto">
-          {/* A Linha Vertical Central (Background Line) */}
+          {/* A Linha Vertical Central */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-purple-900 to-transparent -translate-x-1/2 md:transform" />
 
           {/* Renderização dos Cards */}

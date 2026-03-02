@@ -11,7 +11,7 @@ export default function About() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* --- COLUNA DA ESQUERDA (TEXTO) --- */}
+          {/* TEXTO */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             
             {/* Título "Sobre Mim" */}
@@ -35,7 +35,7 @@ export default function About() {
               Apaixonado por construir soluções inovadoras na interseção de <span className="text-primary">Engenharia de Software</span>, <span className="text-secondary">IoT</span> e <span className="text-purple-400">Visão Computacional</span>.
             </motion.h3>
 
-            {/* Os 3 Parágrafos de Bio */}
+            {/* Parágrafos de Bio */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* --- COLUNA DA DIREITA (FOTO + EDUCAÇÃO) --- */}
+          {/* (FOTO + EDUCAÇÃO) */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-8 mt-8 lg:mt-0">
             
             {/* Círculo com Borda Gradiente e Foto */}
@@ -68,7 +68,7 @@ export default function About() {
               className="relative w-64 h-64 md:w-72 md:h-72"
               onContextMenu={(e) => e.preventDefault()}
             >
-              {/* Borda Gradiente Animada (container atrás da imagem) */}
+              {/* Borda Gradiente Animada */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary via-purple-500 to-pink-500 animate-pulse-slow p-1">
                 <div className="w-full h-full rounded-full bg-background relative overflow-hidden">
                    <Image 
