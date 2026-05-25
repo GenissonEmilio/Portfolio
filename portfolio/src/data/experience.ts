@@ -45,6 +45,16 @@ export const experiences: Experience[] = [
       "Participação ativa na arquitetura de sistemas desde a modelagem do banco de dados até o deploy."
     ],
   },
+  {
+    id: "4",
+    role: "",
+    company: "",
+    location: "",
+    type: "Hybrid",
+    startDate: "",
+    endDate: "",
+    description: [""]
+  },
   // {
   //   id: "4",
   //   role: "Bacharelando em Sistemas de Informação",
