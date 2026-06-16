@@ -47,13 +47,13 @@ export const experiences: Experience[] = [
   },
   {
     id: "4",
-    role: "",
-    company: "",
-    location: "",
-    type: "Hybrid",
-    startDate: "",
-    endDate: "",
-    description: [""]
+    role: "Engenheiro de Software",
+    company: "Grupo X5",
+    location: "Lagarto, SE",
+    type: "In Person",
+    startDate: "2026",
+    endDate: "Present",
+    description: ["Desenvolvimento de aplicações web modernas e CRMs, com foco na construção de soluções de alto nível e na manutenção de projetos, utilizando TypeScript, NestJS e Next.js."]
   },
   // {
   //   id: "4",

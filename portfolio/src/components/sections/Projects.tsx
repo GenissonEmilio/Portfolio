@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, FolderGit2 } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import { cn } from "@/lib/utils";
 
 export default function Projects() {
+  const featuredProjects = projects.filter((project) => project.featured);
+
   return (
     <section id="projects" className="py-24 relative bg-slate-950/50">
       <div className="container mx-auto px-4">
@@ -28,7 +29,7 @@ export default function Projects() {
 
         {/* Grid de Projetos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -98,11 +99,10 @@ export default function Projects() {
         {/* Botão "Ver Mais" para GitHub */}
         <div className="mt-16 text-center">
             <Link 
-                href="https://github.com/GenissonEmilio"
-                target="_blank"
+                href="/projects"
                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
             >
-                Ver todos os repositórios no GitHub <ExternalLink size={16} />
+                Ver todos os projetos <ExternalLink size={16} />
             </Link>
         </div>
 

@@ -14,7 +14,7 @@ export interface Experience {
   role: string;
   company: string;
   location: string;
-  type: 'Remote' | 'On-site' | 'Hybrid';
+  type: 'Remote' | 'On-site' | 'Hybrid' | 'In Person';
   startDate: string;
   endDate: string | 'Present';
   description: string[];
