@@ -28,6 +28,6 @@ export const projects: Project[] = [
     techStack: ["Python", "PyTorch", "Computer Vision", "Jupyter"],
     imageUrl: "/projects/vit-bg.png",
     repoUrl: "https://github.com/GenissonEmilio/Neural-bot.git",
-    featured: false,
+    featured: true,
   },
 ];
