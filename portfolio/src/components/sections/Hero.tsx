@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Cpu, BrainCircuit, MonitorSmartphone } from "lucide-react";
+import { 
+  ArrowRight, 
+  Download, 
+  Cpu, 
+  BrainCircuit, 
+  MonitorSmartphone, 
+  Monitor,
+  Gamepad2, 
+} from "lucide-react";
 import Link from "next/link";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
@@ -118,7 +126,20 @@ export default function Hero() {
               <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-pink-500/50 group-hover:bg-pink-500/10 transition-colors">
                 <Cpu size={32} className="text-slate-400 group-hover:text-pink-400 transition-colors" />
               </div>
-              <span className="text-xs font-medium text-slate-500 group-hover:text-slate-300">IoT Systems</span>
+              <span className="
+              text-xs font-medium 
+              text-slate-500 group-hover:text-slate-300">IoT Systems</span>
+           </div>
+
+           {/* DeskTop & Games*/}
+           <div className="flex flex-col items-center gap-3 group cursor-default">
+            <div className="p-3 rounded-2xl bg-slate-900/50 border border-slate-800 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-colors flex gap-2">
+              <Monitor size={28} className="text-slate-400 group-hover:text-cyan-400 transition-colors" />
+              <Gamepad2 size={28} className="text-slate-400 group-hover:text-cyan-400 transition-colors" />
+            </div>
+            <span className="
+              text-xs font-medium
+               text-slate-500 group-hover:text-slate-300">Desktop & Games</span>
            </div>
 
         </div>
